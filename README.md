@@ -44,3 +44,7 @@ Result artifact: `results/oai_concurrency_stress_result.json`.
 ## Boundary
 
 Tool **input** guardrails cover local function tools only — they do not intercept hosted tools or handoffs (consistent with the maintainer's statement in #5330). Output guardrails have not yet been evaluated.
+
+---
+
+**PHM evidence chain** — aggregate ledger: [phm-evidence-ledger](https://github.com/PHM-Audit/phm-evidence-ledger) (5,000,086,001 units, four layers, open metrics + SHA-256 manifest) · method parent: [agent-action-verifier](https://github.com/PHM-Audit/agent-action-verifier) (AgentDojo-validated) · [PHM-Audit profile](https://github.com/PHM-Audit)
