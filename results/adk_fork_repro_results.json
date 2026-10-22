@@ -1,0 +1,103 @@
+{
+ "test": "ADK concurrent-dispatch ledger fork + per-call veto repro (#6099 thread, 2026-10-22)",
+ "date": "2026-10-22 08:38:48",
+ "env": {
+  "adk_version": "2.12.0",
+  "python": "3.12.13",
+  "platform": "Linux-5.10.134-18.0.12.lifsea8.x86_64-x86_64-with-glibc2.41"
+ },
+ "rows": [
+  {
+   "locked": false,
+   "veto_a": false,
+   "order": [
+    "DECISION A",
+    "DECISION B",
+    "SIDE-EFFECT A",
+    "SIDE-EFFECT B"
+   ],
+   "ledger": [
+    [
+     "A",
+     "GENESIS"
+    ],
+    [
+     "B",
+     "GENESIS"
+    ]
+   ],
+   "fork": true,
+   "n_events": 3
+  },
+  {
+   "locked": false,
+   "veto_a": true,
+   "order": [
+    "DECISION A",
+    "DECISION B",
+    "SIDE-EFFECT B"
+   ],
+   "ledger": [
+    [
+     "A",
+     "GENESIS"
+    ],
+    [
+     "B",
+     "GENESIS"
+    ]
+   ],
+   "fork": true,
+   "n_events": 3
+  },
+  {
+   "locked": true,
+   "veto_a": false,
+   "order": [
+    "DECISION A",
+    "DECISION B",
+    "SIDE-EFFECT A",
+    "SIDE-EFFECT B"
+   ],
+   "ledger": [
+    [
+     "A",
+     "GENESIS"
+    ],
+    [
+     "B",
+     "b5e1b6c7af9f"
+    ]
+   ],
+   "fork": false,
+   "n_events": 3
+  },
+  {
+   "locked": true,
+   "veto_a": true,
+   "order": [
+    "DECISION A",
+    "DECISION B",
+    "SIDE-EFFECT B"
+   ],
+   "ledger": [
+    [
+     "A",
+     "GENESIS"
+    ],
+    [
+     "B",
+     "b5e1b6c7af9f"
+    ]
+   ],
+   "fork": false,
+   "n_events": 3
+  }
+ ],
+ "honesty_notes": [
+  "independent re-implementation from the third-party comment's textual description; their 70-line script was not seen",
+  "canned BaseLlm (deterministic, no external API, no network egress)",
+  "tool is an async function; sync-tool thread-pool behavior untested (matches third-party's untested list)",
+  "single run per row, mechanism demonstration not statistical claim"
+ ]
+}
