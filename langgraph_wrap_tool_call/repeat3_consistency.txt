@@ -1,0 +1,6 @@
+CASE1: PHM_VETO speed_exceeds_light | Speed 500000.0 km/s exceeds c = 299792458 m/s
+CASE2: REPORT_FILED: cruise 900 km/h, range 5000 km, 5.6 h
+CASE1: PHM_VETO speed_exceeds_light | Speed 500000.0 km/s exceeds c = 299792458 m/s
+CASE2: REPORT_FILED: cruise 900 km/h, range 5000 km, 5.6 h
+CASE1: PHM_VETO speed_exceeds_light | Speed 500000.0 km/s exceeds c = 299792458 m/s
+CASE2: REPORT_FILED: cruise 900 km/h, range 5000 km, 5.6 h
