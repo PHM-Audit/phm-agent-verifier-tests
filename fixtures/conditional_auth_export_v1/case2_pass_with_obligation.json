@@ -1,0 +1,9 @@
+{
+  "record_type": "authorization_record",
+  "profile": "conditional-auth-v1",
+  "decision": "PASS",
+  "attempted_call": {"tool": "db.delete_row", "args_digest": "8f2a...", "attempted_at": "2026-11-11T03:21:00Z"},
+  "obligations": [{"id": "obl-1", "type": "confirmation", "description": "second-user confirmation for destructive delete", "due": "before", "fulfilled": null, "evidence_digest": null}],
+  "diagnostics": [],
+  "record_digest": "(computed at pin time)"
+}

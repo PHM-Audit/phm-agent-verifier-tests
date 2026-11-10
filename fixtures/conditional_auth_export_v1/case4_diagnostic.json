@@ -1,0 +1,10 @@
+{
+  "record_type": "authorization_record",
+  "profile": "conditional-auth-v9-unsupported",
+  "decision": null,
+  "attempted_call": {"tool": "email.send", "args_digest": "aa11...", "attempted_at": "2026-11-11T03:23:00Z"},
+  "obligations": null,
+  "diagnostics": ["E_UNSUPPORTED_PROFILE"],
+  "note": "policy-omitted arguments and unsupported profiles produce a distinct diagnostic; they never silently turn an unanswerable audit question into a successful check",
+  "record_digest": "(computed at pin time)"
+}

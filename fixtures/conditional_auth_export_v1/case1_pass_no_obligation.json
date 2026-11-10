@@ -1,0 +1,9 @@
+{
+  "record_type": "authorization_record",
+  "profile": "conditional-auth-v1",
+  "decision": "PASS",
+  "attempted_call": {"tool": "file.read", "args_digest": "3b1c...", "attempted_at": "2026-11-11T03:20:00Z"},
+  "obligations": [],
+  "diagnostics": [],
+  "record_digest": "(computed at pin time)"
+}

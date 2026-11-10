@@ -1,0 +1,10 @@
+{
+  "record_type": "authorization_record",
+  "profile": "conditional-auth-v1",
+  "decision": "VETO",
+  "attempted_call": {"tool": "db.drop_table", "args_digest": "c4d9...", "attempted_at": "2026-11-11T03:22:00Z"},
+  "obligations": [],
+  "diagnostics": [],
+  "veto_reason": "refusal correlated to attempted call c4d9...; missing tool response alone does NOT prove non-execution - a side-effect-observed flag must be checked separately",
+  "record_digest": "(computed at pin time)"
+}

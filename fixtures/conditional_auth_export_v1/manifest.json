@@ -1,0 +1,36 @@
+{
+ "fixture": "conditional_auth_export_v1",
+ "revision": "v1.0.0",
+ "pinned": "2026-11-11",
+ "author": "PHM-Audit",
+ "files": {
+  "EXPECTED_CONCLUSIONS.md": {
+   "sha256": "d44f6a886caeb0facd26613aa98ecf2d34badb7df1c8c6648fb09e718fcb9d90",
+   "bytes": 1421
+  },
+  "READING.md": {
+   "sha256": "98a3dd464a7041020b665ee33abc943dd2ddafdf10474f55e869ceca0ec9c329",
+   "bytes": 1935
+  },
+  "case1_pass_no_obligation.json": {
+   "sha256": "cc23ebf7e263fd8b53a2dddfc898c54f0314fc9d124b1508f22e028cd738f7be",
+   "bytes": 298
+  },
+  "case2_pass_with_obligation.json": {
+   "sha256": "1de168b9f8d4799957d5cac3ca7bc32b5f4941fc6641f5853cceab532d87a25e",
+   "bytes": 468
+  },
+  "case3_veto.json": {
+   "sha256": "4648cfa236166d791955bd22bb09a804f589488d287983e4b87f006e3cd5fdad",
+   "bytes": 482
+  },
+  "case4_diagnostic.json": {
+   "sha256": "aef983e46bd2ae2d38a9f6d240debed68501419c285a6137e9e5603cd947557a",
+   "bytes": 508
+  },
+  "schema.json": {
+   "sha256": "e718309958d56e9a2c605ef360c727a46cff4641ff79caeee185d3f7115c32ce",
+   "bytes": 1379
+  }
+ }
+}

@@ -1,0 +1,16 @@
+{
+  "$id": "https://github.com/PHM-Audit/phm-agent-verifier-tests/fixtures/conditional_auth_export_v1/schema.json",
+  "title": "Conditional authorization export record (synthetic, v1)",
+  "profile": "conditional-auth-v1",
+  "required_fields": {
+    "record_type": "enum: authorization_record",
+    "profile": "string, pinned profile id",
+    "decision": "enum: PASS | DEGRADE | VETO  (semantic states; names illustrative, binding decisions belong to assignees)",
+    "attempted_call": "object: {tool, args_digest (sha256), attempted_at}",
+    "obligations": "array of typed obligations; explicit field, MUST be present even when empty",
+    "obligation_object": "{id, type, description, due (before|during|after action), fulfilled: true|false|null (null = not yet evaluable), evidence_digest}",
+    "diagnostics": "array, distinct codes: E_UNSUPPORTED_PROFILE | E_INVALID_CHAIN_LINK | E_EVIDENCE_UNAVAILABLE | E_POLICY_OMITTED_ARGS",
+    "record_digest": "sha256 over canonical serialization of all fields above"
+  },
+  "distinguishing_rule": "A reader outside the runtime can distinguish authorization-without-obligations from authorization-with-obligations IFF the obligations field is explicitly present in the exported record (empty array vs non-empty). If the field is omitted by policy or the profile is unsupported, the correct output is a diagnostic code, not a PASS."
+}
