@@ -1,16 +1,18 @@
 {
  "fixture": "conditional_auth_export_v1",
- "revision": "v1.0.0",
- "pinned": "2026-11-11",
+ "revision": "v1.1.0",
+ "revision_note": "v1.1.0 adds case5 (obligations key absent -> E_POLICY_OMITTED_FIELD) per reviewer suggestion in adk-python#6099; E_POLICY_OMITTED_FIELD added to diagnostics; no change to case1-4 bytes",
+ "previous_revision": "v1.0.0 (pinned 2026-11-11, commit cb50bffacc337e37133f5a16d757f9175afabb6f)",
+ "pinned": "2026-11-12",
  "author": "PHM-Audit",
  "files": {
   "EXPECTED_CONCLUSIONS.md": {
-   "sha256": "d44f6a886caeb0facd26613aa98ecf2d34badb7df1c8c6648fb09e718fcb9d90",
-   "bytes": 1421
+   "sha256": "a8337107c38a12fae8066d3e44275e896db9c88553d11dbc21c7b1ff69e3fcdf",
+   "bytes": 1922
   },
   "READING.md": {
-   "sha256": "98a3dd464a7041020b665ee33abc943dd2ddafdf10474f55e869ceca0ec9c329",
-   "bytes": 1935
+   "sha256": "7c8df3d588f9628087dcc4b4b7ff1e0160d514a70684ddf017ce3754a14294a1",
+   "bytes": 2405
   },
   "case1_pass_no_obligation.json": {
    "sha256": "cc23ebf7e263fd8b53a2dddfc898c54f0314fc9d124b1508f22e028cd738f7be",
@@ -28,9 +30,13 @@
    "sha256": "aef983e46bd2ae2d38a9f6d240debed68501419c285a6137e9e5603cd947557a",
    "bytes": 508
   },
+  "case5_policy_omitted_obligations.json": {
+   "sha256": "54fec4ef54d3b0c57e0bb9162b0be8fc2d41a88bd15a9b0a963198aa77f6f161",
+   "bytes": 707
+  },
   "schema.json": {
-   "sha256": "e718309958d56e9a2c605ef360c727a46cff4641ff79caeee185d3f7115c32ce",
-   "bytes": 1379
+   "sha256": "146b832ec3294ffd349d829f2f2dc30284b224064790c8381d421ab18e99efd3",
+   "bytes": 1836
   }
  }
 }

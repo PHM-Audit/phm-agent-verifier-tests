@@ -1,0 +1,9 @@
+{
+  "record_type": "authorization_record",
+  "profile": "conditional-auth-v1",
+  "decision": null,
+  "attempted_call": {"tool": "db.delete_row", "args_digest": "8f2a...", "attempted_at": "2026-11-11T03:24:00Z"},
+  "diagnostics": ["E_POLICY_OMITTED_FIELD"],
+  "note": "the obligations key is absent from this record entirely (policy-driven omission). This is materially different from case1's obligations: [] — an explicit empty array asserts 'no obligations apply'; an absent key asserts nothing, and the record alone cannot establish that the omission was policy-driven rather than lossy export. The reader must emit the omission diagnostic, never a PASS.",
+  "record_digest": "(computed at pin time)"
+}

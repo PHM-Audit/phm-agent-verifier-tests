@@ -9,8 +9,9 @@
     "attempted_call": "object: {tool, args_digest (sha256), attempted_at}",
     "obligations": "array of typed obligations; explicit field, MUST be present even when empty",
     "obligation_object": "{id, type, description, due (before|during|after action), fulfilled: true|false|null (null = not yet evaluable), evidence_digest}",
-    "diagnostics": "array, distinct codes: E_UNSUPPORTED_PROFILE | E_INVALID_CHAIN_LINK | E_EVIDENCE_UNAVAILABLE | E_POLICY_OMITTED_ARGS",
+    "diagnostics": "array, distinct codes: E_UNSUPPORTED_PROFILE | E_INVALID_CHAIN_LINK | E_EVIDENCE_UNAVAILABLE | E_POLICY_OMITTED_ARGS | E_POLICY_OMITTED_FIELD (added v1.1.0: a required field was omitted entirely by policy, e.g. obligations absent rather than empty)",
     "record_digest": "sha256 over canonical serialization of all fields above"
   },
-  "distinguishing_rule": "A reader outside the runtime can distinguish authorization-without-obligations from authorization-with-obligations IFF the obligations field is explicitly present in the exported record (empty array vs non-empty). If the field is omitted by policy or the profile is unsupported, the correct output is a diagnostic code, not a PASS."
+  "distinguishing_rule": "A reader outside the runtime can distinguish authorization-without-obligations from authorization-with-obligations IFF the obligations field is explicitly present in the exported record (empty array vs non-empty). If the field is omitted by policy or the profile is unsupported, the correct output is a diagnostic code, not a PASS. Note the three states are not interchangeable: obligations: [] asserts 'no obligations apply'; obligations: null (case4) marks an unanswerable question under an unsupported profile; an absent key (case5) is an unrecorded policy omission — the record alone cannot distinguish it from a lossy export.",
+  "revision": "v1.1.0"
 }
